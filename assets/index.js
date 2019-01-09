@@ -70,24 +70,24 @@ database.ref().on("child_added", function(childSnapshot) {
   var trainArrival = childSnapshot.val().arrival;
   var trainAway = childSnapshot.val().minutesAway;
 
-  // Employee Info
+  // Train Info
   console.log(trainName);
   console.log(trainDestination);
   console.log(trainFrequency);
   console.log(trainArrival);
   console.log(trainAway);
 
-  // Prettify the employee start
-  var trainFrequencyPretty = moment.unix(trainFrequency).format("MM/DD/YYYY");
+  // // Prettify the employee start
+  // var trainFrequencyPretty = moment.unix(trainFrequency).format("MM/DD/YYYY");
 
-  // Calculate the months worked using hardcore math
-  // To calculate the months worked
-  var empMonths = moment().diff(moment(trainFrequency, "X"), "months");
-  console.log(empMonths);
+  // // Calculate the months worked using hardcore math
+  // // To calculate the months worked
+  // var empMonths = moment().diff(moment(trainFrequency, "X"), "months");
+  // console.log(empMonths);
 
-  // Calculate the total billed rate
-  var empBilled = empMonths * trainArrival;
-  console.log(empBilled);
+  // // Calculate the total billed rate
+  // var empBilled = empMonths * trainArrival;
+  // console.log(empBilled);
 
   // Create the new row
   var newRow = $("<tr>").append(
