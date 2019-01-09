@@ -65,10 +65,10 @@ database.ref().on("child_added", function(childSnapshot) {
 
   // Store everything into a variable.
   var trainName = childSnapshot.val().name;
-  var trainDestination = childSnapshot.val().role;
-  var trainFrequency = childSnapshot.val().start;
-  var trainArrival = childSnapshot.val().rate;
-  var trainAway = childSnapshot.val().rate;
+  var trainDestination = childSnapshot.val().destination;
+  var trainFrequency = childSnapshot.val().frequency;
+  var trainArrival = childSnapshot.val().arrival;
+  var trainAway = childSnapshot.val().minutesAway;
 
   // Employee Info
   console.log(trainName);
