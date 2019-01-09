@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <title>Train Scheduler</title>
-  <link rel="stylesheet" href="assets/style.css">
+  
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
   <!-- Moment.js Reference -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- 
 
-  
+
+
+</body>
+</html> -->
 </head>
 
 <body>
@@ -26,7 +37,9 @@
     <!-- Jumbotron -->
     <div class="jumbotron" style="background-color: rgb(39, 7, 82); color: wheat">
       <h1 class="text-center">Train Schedule</h1>
-      <h4 class="text-center">You're traveling through another dimension, a dimension not only of sight and sound but of mind. A journey into a wondrous land whose boundaries are that of imagination. That's the signpost up ahead - your next stop, the Twilight Zone!</h4>
+      <h4 class="text-center">You're traveling through another dimension, a dimension not only of sight and sound but
+        of mind. A journey into a wondrous land whose boundaries are that of imagination. That's the signpost up ahead
+        - your next stop, the Twilight Zone!</h4>
     </div>
 
     <div class="row">
@@ -45,7 +58,7 @@
                   <th scope="col">Frequency (min)</th>
                   <th scope="col">Next Arrival</th>
                   <th scope="col">Minutes Away</th>
-                  
+
                 </tr>
               </thead>
               <tbody>
@@ -96,7 +109,7 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="index.js"></script>
+  <script src="assets/index.js"></script>
 
 </body>
 
