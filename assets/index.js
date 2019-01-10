@@ -95,7 +95,7 @@ database.ref().on("child_added", function(childSnapshot) {
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
     console.log("DIFFERENCE IN TIME: " + diffTime);
 
-    // Time apart (remainder)
+    // difftime mod tfreq  --- Time apart (remainder)
     var tRemainder = diffTime % tFrequency;
     console.log(tRemainder);
 
@@ -105,26 +105,15 @@ database.ref().on("child_added", function(childSnapshot) {
 
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
-    
-  // Prettify the Train start
-  // var trainFrequencyPretty = moment.unix(trainFrequency).format("hh:mm");
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm A"));
 
-  // Calculate the months worked using hardcore math
-  // To calculate the months worked
-  // var empMonths = moment().diff(moment(trainFrequency, "X"), "months");
-  // console.log(empMonths);
-
-  // // Calculate the total billed rate
-  // var empBilled = empMonths * trainArrival;
-  // console.log(empBilled);
-
+    var nextArrival =moment(nextTrain).format("hh:mm A");
   // Create the new row
   var newRow = $("<tr>").append(
     $("<td>").text(trainName),
     $("<td>").text(trainDestination),
     $("<td>").text(trainFrequency),
-    $("<td>").text(nextTrain),
+    $("<td>").text(nextArrival),
     $("<td>").text(tMinutesTillTrain)
   );
 
@@ -132,10 +121,3 @@ database.ref().on("child_added", function(childSnapshot) {
   $("#train-table > tbody").append(newRow);
 });
 
-// Example Time Math
-// -----------------------------------------------------------------------------
-// Assume Employee start date of January 1, 2015
-// Assume current date is March 1, 2016
-
-// We know that this is 15 months.
-// Now we will create code in moment.js to confirm that any attempt we use meets this test case
